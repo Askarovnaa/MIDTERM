@@ -35,7 +35,7 @@ class Employee(models.Model):
         """
         String for representing the Model object.
         """
-        return self.title
+        return self.Name
     
     
     def get_absolute_url(self):
@@ -51,7 +51,6 @@ class Department(models.Model):
     name = models.CharField(max_length=100)
     
    
-
     class Meta:
         ordering = ["name"]
     
@@ -66,4 +65,4 @@ class Department(models.Model):
         """
         String for representing the Model object.
         """
-        return '{0}, {1}'.format(self.name)
+        return '{0}, {0}'.format(self.name)
