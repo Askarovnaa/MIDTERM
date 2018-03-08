@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Қызметкерлер тізімі</h1>
+
+    {% if employee_list %}
+    <ul>
+
+      {% for employee in employee_list %}
+      <li>
+        <a href="{{ employee.get_absolute_url }}">{{ employee.Name }}</a> 
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no employees in the library.</p>
+    {% endif %}       
+{% endblock %}

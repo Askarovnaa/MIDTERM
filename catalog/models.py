@@ -48,9 +48,9 @@ class Department(models.Model):
     """
     Model representing an department.
     """
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=50)
+  
     
-   
     class Meta:
         ordering = ["name"]
     

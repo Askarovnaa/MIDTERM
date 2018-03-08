@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Name: {{ employee.Name }}</h1>
+
+  <p><strong>Department:</strong> <a href="">{{ employee.department }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Email:</strong> {{ employee.email }}</p>
+  <p><strong>IIN:</strong> {{ employee.iin }}</p> 
+  <p><strong>Location:</strong> {% for location in employee.location.all %} {{ location }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
+
+{% endblock %}
